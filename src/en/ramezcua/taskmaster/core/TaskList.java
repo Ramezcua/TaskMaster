@@ -18,13 +18,12 @@ public class TaskList {
 		return tasks.get(index);
 	}
 	
-	public void addTask(){
-		Task task = new Task();
+	public void addTask(String description){
+		Task task = new Task(description);
 		this.tasks.add(task);
 	}
 	
-	public void addTask(String description){
-		Task task = new Task(description);
+	public void addTask(Task task){
 		this.tasks.add(task);
 	}
 	
