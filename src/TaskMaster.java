@@ -8,7 +8,7 @@ public class TaskMaster {
 		
 		JFrame window = new JFrame("Task Master");
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		window.setSize(500, 700);
+		window.setSize(350, 700);
 		window.setLayout(new BoxLayout(window.getContentPane(), BoxLayout.PAGE_AXIS));
 		
 		JPanel topButtons = new JPanel();
@@ -17,14 +17,16 @@ public class TaskMaster {
 		topButtons.setLayout(new FlowLayout());
 		
 		JButton newTaskButton = new JButton("New Task");
-		JButton removeCompletedTasksButton = new JButton("Remove Completed Tasks");
+		JButton removeCompletedTasksButton = new JButton("Remove Tasks");
 		
 		topButtons.add(newTaskButton);
 		topButtons.add(removeCompletedTasksButton);
 		
-		JTextArea text = new JTextArea("Get the milk");
+		JCheckBox task = new JCheckBox("Get the milk");
+		task.setForeground(new Color(205, 201, 201));
 		
-		taskPanel.add(text);
+		
+		taskPanel.add(task);
 		
 		window.add(topButtons);
 		window.add(Box.createRigidArea(new Dimension(0,5)));
